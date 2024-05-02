@@ -24,6 +24,7 @@ function handleInput(event) {
     return;
   }
 
+
   // Check which arrow key was pressed
   switch (event.key) {
     case 'ArrowUp':
@@ -159,6 +160,10 @@ function startGame() {
   setTimeout(stopGame, 4 * 60 * 1000 + 31 * 1000);
 }
 
+function pauseGame() {
+  isStarted = false;
+}
+
 // Function to create and animate arrow shapes
 function createArrow() {
   if (isStarted) {
@@ -190,7 +195,9 @@ function createArrow() {
 
 // Function to continuously create arrows at intervals
 function startArrowRain() {
+  if(isStarted){
   setInterval(createArrow, 1000); // Create arrow every second (adjust interval as needed)
+  }
 }
 
 function createRandomArrow(num) {
@@ -224,8 +231,20 @@ function createRandomArrow(num) {
 document.addEventListener('keydown', handleInput);
 
 document.getElementById('startbutton').addEventListener('click', function () {
+  document.getElementById('startbutton').style.display="none";
+  document.getElementById('pausebutton').style.display="flex";
+
   setTimeout(() => {
     startGame();
     playSong();
   }, 2000);
 });
+
+document.getElementById('pausebutton').addEventListener('click',function (){
+  document.getElementById('startbutton').style.display="flex";
+  document.getElementById('pausebutton').style.display="none";
+  pauseGame();
+  pauseSong();
+
+});
+
