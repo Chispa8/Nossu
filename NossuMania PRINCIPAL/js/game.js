@@ -61,6 +61,8 @@ function stopGame() {
 }
 
 
+
+
 function decreaseHealth() {
   let healthBar = document.getElementsByClassName('life-progress');
   // Decrease health (adjust as needed)
@@ -164,6 +166,31 @@ function pauseGame() {
   isStarted = false;
 }
 
+function restartGame() {
+  // Reset game variables
+
+  pauseSong()
+
+  setTimeout(() => {
+    startGame();
+    playSong();
+  }, 5000);
+
+   health = 100;
+   score = 0;
+   combo = 0;
+   maxCombo = 0;
+   isStarted = false;
+
+  // Reset visual elements if needed
+    document.querySelector('.life-progress').style.width = '50%'; // Reset health bar width
+    renderScore(); // Render initial score
+    renderCombo(); // Render initial combo
+    renderMaxCombo(); // Render initial max combo
+
+
+}
+
 // Function to create and animate arrow shapes
 function createArrow() {
   if (isStarted) {
@@ -228,9 +255,9 @@ function createRandomArrow(num) {
   };
 }
 
-document.addEventListener('keydown', handleInput);
+  document.addEventListener('keydown', handleInput);
 
-document.getElementById('startbutton').addEventListener('click', function () {
+  document.getElementById('startbutton').addEventListener('click', function () {
   document.getElementById('startbutton').style.display="none";
   document.getElementById('pausebutton').style.display="flex";
 
@@ -240,11 +267,13 @@ document.getElementById('startbutton').addEventListener('click', function () {
   }, 2000);
 });
 
-document.getElementById('pausebutton').addEventListener('click',function (){
+  document.getElementById('pausebutton').addEventListener('click',function (){
   document.getElementById('startbutton').style.display="flex";
   document.getElementById('pausebutton').style.display="none";
   pauseGame();
   pauseSong();
 
 });
+
+document.getElementById('restartbutton').addEventListener('click', restartGame);
 
