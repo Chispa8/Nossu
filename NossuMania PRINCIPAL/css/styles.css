@@ -14,31 +14,44 @@ body {
 }
 
 .arrow-left {
-    border-top: 50px solid transparent;
+    /*border-top: 50px solid transparent;
     border-bottom: 50px solid transparent;
-    border-right: 100px solid blue; /* Change color as needed */
-    position: absolute;
+    border-right: 100px solid blue;  Change color as needed  */
+    background-image: url('/assets/images/LEFT-arrow-1.png'); 
+    position: absolute;  
+    height: 100px;
+    width: 100px;
+    background-size: contain;  /* Ensures that the image fits the size of the container */
+    background-position: center; /* Centers the image in the container */
+  
+
   }
 
 .arrow-right {
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 100px solid blue; /* Change color as needed */
-    position: absolute;
-}
+    background-image: url('/assets/images/RIGHT-arrow.png'); 
+    position: absolute;  
+    height: 100px;
+    width: 100px;
+    background-size: contain;  /* Ensures that the image fits the size of the container */
+    background-position: center; /* Centers the image in the container */
+  } 
 
 .arrow-bottom{
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-    border-top: 100px solid blue; /* Change color as needed */
-    position: absolute;
+    background-image: url('/assets/images/DOWN-arrow.png'); 
+    position: absolute;  
+    height: 100px;
+    width: 100px; 
+    background-size: contain;  /* Ensures that the image fits the size of the container */
+    background-position: center; /* Centers the image in the container */
 }
 
 .arrow-top{
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-    border-bottom: 100px solid blue; /* Change color as needed */
-    position: absolute;
+    background-image: url('/assets/images/UP-arrow-1.png'); 
+    position: absolute;  
+    height: 100px;
+    width: 100px; 
+    background-size: contain;  /* Ensures that the image fits the size of the container */
+    background-position: center; /* Centers the image in the container */
 }
 
 /* Center the game container */
@@ -189,7 +202,7 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: 'Honk', sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   position: fixed;
   bottom: 10px;
 }
