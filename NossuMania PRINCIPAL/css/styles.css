@@ -7,90 +7,91 @@ body {
   flex-direction: column;
   position: relative;
   background-size: cover;
-  background-image: url('/assets/images/nossu.png');
+  background-image: url("./assets/images/nossu.png");
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
 }
 
 .arrow-left {
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-right: 100px solid blue; /* Change color as needed */
-    position: absolute;
-  }
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 100px solid blue; /*Change color as needed */
+  background-image: url("./assets/images/LEFT-arrow-1.png");
+  position: absolute;
+}
 
 .arrow-right {
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 100px solid blue; /* Change color as needed */
-    position: absolute;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 100px solid blue; /* Change color as needed */
+  position: absolute;
 }
 
-.arrow-bottom{
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-    border-top: 100px solid blue; /* Change color as needed */
-    position: absolute;
+.arrow-bottom {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 100px solid blue; /* Change color as needed */
+  position: absolute;
 }
 
-.arrow-top{
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-    border-bottom: 100px solid blue; /* Change color as needed */
-    position: absolute;
+.arrow-top {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 100px solid blue; /* Change color as needed */
+  position: absolute;
 }
 
 /* Center the game container */
 #game-container {
-    display: flex; /* Arrange divs horizontally */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px; /* Adjust width as needed */
-    height: 90%; /* Adjust height as needed */
-    background-color: transparent; /* Just for visibility */ /* Just for visibility */
-    overflow: hidden; /* Ensure arrows are clipped if they exceed container boundaries */
-  }
+  display: flex; /* Arrange divs horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Adjust width as needed */
+  height: 90%; /* Adjust height as needed */
+  background-color: transparent; /* Just for visibility */ /* Just for visibility */
+  overflow: hidden; /* Ensure arrows are clipped if they exceed container boundaries */
+}
 
-  #game-container > div {
-    flex: 1; /* Each div occupies equal space */
-    display: flex;
-    justify-content: center; /* Center arrow shapes horizontally */ /* Just for visibility */
-  }
+#game-container > div {
+  flex: 1; /* Each div occupies equal space */
+  display: flex;
+  justify-content: center; /* Center arrow shapes horizontally */ /* Just for visibility */
+}
 
 #static-left {
-    align-self: flex-end;
-    height: 100px; /* Position static arrow at the bottom of the container */
-    width: 100%; /* Take up the full width of the container */
+  align-self: flex-end;
+  height: 100px; /* Position static arrow at the bottom of the container */
+  width: 100%; /* Take up the full width of the container */
+  background-image: url("./assets/images/ELEFT-arrow-2.png");
 }
 
 #static-right {
-    align-self: flex-end;
-    height: 100px; /* Position static arrow at the bottom of the container */
-    width: 100%; /* Take up the full width of the container */
+  align-self: flex-end;
+  height: 100px; /* Position static arrow at the bottom of the container */
+  width: 100%; /* Take up the full width of the container */
 }
 
 #static-bottom {
-    align-self: flex-end;
-    height: 100px; /* Position static arrow at the bottom of the container */
-    width: 100%; /* Take up the full width of the container */
-    display: flex;
+  align-self: flex-end;
+  height: 100px; /* Position static arrow at the bottom of the container */
+  width: 100%; /* Take up the full width of the container */
+  display: flex;
 }
 
 #static-top {
-    align-self: flex-end;
-    height: 100px; /* Position static arrow at the bottom of the container */
-    width: 100%;
-    display: flex; /* Take up the full width of the container */
+  align-self: flex-end;
+  height: 100px; /* Position static arrow at the bottom of the container */
+  width: 100%;
+  display: flex; /* Take up the full width of the container */
 }
 
 .static-arrow {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
-
 
 .game-container {
   display: flex;
@@ -108,7 +109,7 @@ body {
   align-self: flex-start;
   height: 100%;
   width: 100%;
-  font-family: 'Honk', sans-serif;
+  font-family: "Honk", sans-serif;
   font-size: 4em;
 }
 
@@ -120,7 +121,6 @@ body {
   height: 100%;
   width: 20%;
   margin-top: 300px;
-  
 }
 
 .combos {
@@ -188,7 +188,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Honk', sans-serif;
+  font-family: "Honk", sans-serif;
   font-size: 2em;
   position: fixed;
   bottom: 10px;
@@ -197,31 +197,28 @@ body {
 .button {
   margin-top: 25px;
   margin-left: 15px;
-  
-
 }
 
 @keyframes topAnimation {
   from {
-      transform: translate(0rem, 0);
+    transform: translate(0rem, 0);
   }
   to {
-      transform: translate(0rem, 3.5rem);
+    transform: translate(0rem, 3.5rem);
   }
 }
 
 @keyframes bottomAnimation {
   from {
-      transform: translate(-11.5rem, 0);
+    transform: translate(-11.5rem, 0);
   }
   to {
-      transform: translate(-7.5rem, 0);
+    transform: translate(-7.5rem, 0);
   }
 }
 
 .btnstart,
-.btnpause 
-{
+.btnpause {
   text-decoration: none;
   z-index: 999;
   font-size: 2em;
@@ -242,8 +239,7 @@ body {
 .btnstart::after,
 .btnstart::before,
 .btnpause::after,
-.btnpause::before
-{
+.btnpause::before {
   border: 0;
   content: "";
   position: absolute;
@@ -255,19 +251,21 @@ body {
 }
 
 .btnstart::before,
-.btnpause::before{
+.btnpause::before {
   background-color: rgba(230, 129, 230, 1);
   top: -0.75rem;
   left: 0.5rem;
-  animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+  animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s
+    infinite alternate;
 }
 
 .btnstart::after,
-.btnpause::after{
+.btnpause::after {
   background-color: rgba(230, 129, 230, 1);
   top: 3rem;
   left: 13rem;
-  animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+  animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s
+    infinite alternate;
 }
 
 .btnstart:hover,
@@ -279,7 +277,6 @@ body {
 .btnstart:hover::after,
 .btnpause:hover::before,
 .btnpause:hover::after {
-  
   top: 0;
   height: 100%;
   width: 100%;
@@ -297,12 +294,11 @@ body {
   left: 0.35rem;
 }
 
-#pausebutton{
-  display:none;
+#pausebutton {
+  display: none;
 }
 
-
-.btnrestart{
+.btnrestart {
   text-decoration: none;
   left: 200px;
   z-index: 999;
@@ -321,42 +317,39 @@ body {
 }
 
 .btnrestart::after,
-.btnrestart::before{
-  
-    border: 0;
-    content: "";
-    position: absolute;
-    height: 40%;
-    width: 10%;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: -2;
-    border-radius: 50%;
-  }
+.btnrestart::before {
+  border: 0;
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 10%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+  border-radius: 50%;
+}
 
-
-.btnrestart::before{
+.btnrestart::before {
   background-color: rgba(230, 129, 230, 1);
   top: -0.75rem;
   left: 0.5rem;
-  animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+  animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s
+    infinite alternate;
 }
 
-.btnrestart::after{
+.btnrestart::after {
   background-color: rgba(230, 129, 230, 1);
   top: 3rem;
   left: 13rem;
-  animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+  animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s
+    infinite alternate;
 }
-
 
 .btnrestart:hover {
   color: white;
 }
 
 .btnrestart:hover::before,
-.btnrestart:hover::after
- {
-  
+.btnrestart:hover::after {
   top: 0;
   height: 100%;
   width: 100%;
